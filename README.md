@@ -55,7 +55,7 @@ You're trading 3-5% of your new context to retain the *entire* conversation hist
 ## Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/total-recall.git
+git clone https://github.com/ovachiever/total-recall.git
 cd total-recall
 chmod +x install.sh
 ./install.sh
@@ -120,9 +120,11 @@ That's it. Compaction context is now automatic.
 tmux is a terminal multiplexer. For this project, you only need to know one thing: **type `tmux` before `claude`**. Everything else works the same.
 
 An [example tmux config](example-tmux.conf) is included with sane defaults:
+- **Tab titles that are actually better than without tmux.** Shows `⠂ claude — my-project` in your terminal tab: the status indicator (working/idle) from Claude Code, the AI harness name, and the project path. Ghostty-tested, but should work with any terminal that supports title escape sequences.
 - 50K line scrollback (default 2K is too small for long Claude sessions)
 - Mouse support (scroll, click, resize — all work naturally)
 - True color (Claude Code's UI looks correct)
+- Auto-kill sessions on tab close (no zombie tmux sessions eating RAM)
 - Remapped prefix to `Ctrl+a` (default `Ctrl+b` is awkward)
 
 ```bash
