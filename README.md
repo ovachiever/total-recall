@@ -157,7 +157,6 @@ The snapshot is capped at 60K characters (safety limit — real captures are typ
 ## Limitations
 
 - **Requires tmux.** Without it, there's no programmatic way to capture terminal scrollback from most terminal emulators (Ghostty, Terminal.app, etc.). iTerm2 has AppleScript APIs but they're fragile.
-- **Doesn't survive crashes.** tmux sessions are lost on kernel panics or hard reboots. The hooks only help with *compaction*, which is a graceful event.
 - **Scrollback has a limit.** The included tmux config sets 50K lines. Extremely long sessions might exceed this — increase `history-limit` in your tmux config if needed.
 
 ## License
